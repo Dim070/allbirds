@@ -1,0 +1,548 @@
+/*Обнуление*/
+/* убрать все отступы и границы*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+
+}
+
+/* меняет подсчет блока (удобно для верстки)*/
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*убирает линии обводки у некоторых браузеров*/
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+/*делает блочными элементы*/
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+/*уравнивает поведение шрифтов для разных браузеров (+запрещает увеличение шрифта на Iphone)*/
+html,
+body {
+	font-size: 100%;
+	line-height: 1;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+	color: #212A2F;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/*наследование шрифта для форм*/
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+/*убирает некоторые особенности тегов у разных браузеров*/
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+/*обнуляем заголовки*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 700;
+}
+
+/*--------------------*/
+
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+
+}
+
+.header {
+	position: relative;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+}
+
+.header__collections a {
+	margin-left: 36px;
+}
+
+.header__menu a {
+	margin-right: 36px;
+}
+
+.header__menu_link {
+	position: relative;
+	bottom: 6px;
+}
+
+.header__logo {
+	position: absolute;
+	left: 660px;
+	width: 120px;
+	height: 40px;
+	margin: 0 auto;
+}
+
+/*Основная*/
+
+.main-screen {
+	max-width: 100%;
+	height: 740px;
+	position: relative;
+}
+
+a {
+	color: #212A2F
+}
+
+.main-screen_bg {
+	background: url("../img/main-screen.jpg") center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.main-screen__content,
+.content {
+	position: absolute;
+	top: 504px;
+	left: 55px;
+	z-index: 10;
+	width: 670px;
+	height: 170px;
+	color: #FFFFFF;
+}
+
+.content_title {
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.content_description {
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.content__buttons {
+	display: flex;
+	justify-content: space-between;
+	width: 385px;
+	height: 50px;
+	margin-top: 25px;
+
+}
+
+.content__buttons_button {
+	width: 180px;
+	height: 50px;
+	border-radius: 2px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.content__buttons_button:hover,
+.content__buttons_button:focus {
+	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	transform: translateY(-0.25em);
+}
+
+
+/*CATALOG*/
+
+.catalog {
+	color: #212A2F;
+}
+
+.container {
+	width: 1235px;
+	margin: 0 auto;
+}
+
+.catalog_title {
+	text-align: center;
+	margin-top: 120px;
+	font-weight: bold;
+	font-size: 32px;
+}
+
+.catalog_link {
+	display: block;
+	text-align: center;
+	margin-top: 32px;
+	font-weight: bold;
+	color: #212A2F;
+	padding-bottom: 12px;
+	border-bottom: 2px solid #D3D4D5;
+}
+
+.catalog__blocks,
+.blocks {
+	display: flex;
+	justify-content: space-between;
+	width: 1240px;
+	height: 513px;
+}
+
+.blocks__first-block {
+	display: flex;
+	flex-direction: column;
+}
+
+.blocks__first-block_img {
+	background-image: url("/img/catalog/Rectangle.png");
+	width: 396px;
+	height: 396px;
+	margin-top: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.catalog__blocks_button {
+	width: 276px;
+	height: 48px;
+	margin-bottom: 12px;
+	border-radius: 2px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.catalog__blocks_button:hover,
+.catalog__blocks_button:focus {
+	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	transform: translateY(-0.25em);
+}
+
+.blocks_title {
+	font-weight: bold;
+	font-size: 22px;
+	padding: 30px 0 20px 15px;
+	border-bottom: 1px solid #D3D4D5;
+}
+
+.blocks_description {
+	font-size: 14px;
+	padding: 10px 0 0 15px;
+}
+
+.blocks_description img {
+	margin: 0 5px -10px 0;
+}
+
+.blocks__second-block {
+	display: flex;
+	flex-direction: column;
+}
+
+.blocks__second-block_img {
+	background-image: url("/img/catalog/Rectangle1.png");
+	width: 396px;
+	height: 396px;
+	margin-top: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.blocks__third-block {
+	display: flex;
+	flex-direction: column;
+}
+
+.blocks__third-block_img {
+	background-image: url("/img/catalog/Rectangle2.png");
+	width: 396px;
+	height: 396px;
+	margin-top: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+.full_section__bg {
+	width: 1440px;
+	height: 540px;
+	margin-top: 140px;
+}
+
+.full_section__title {
+	margin-top: 50px;
+	font-weight: 700;
+	font-size: 32px;
+	text-align: center;
+}
+
+.full_section__description {
+	margin: 50px auto 30px auto;
+	width: 645px;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+}
+
+.full_section__buttons {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	width: 385px;
+	height: 50px;
+}
+
+.full_section__buttons_btn {
+	width: 180px;
+	height: 48px;
+	border-radius: 2px;
+	font-weight: 700;
+	font-size: 14px;
+	color: #FFFFFF;
+	background: #212A2F;
+}
+
+.full_section__buttons_btn:hover,
+.full_section__buttons_btn:focus {
+	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	transform: translateY(-0.25em);
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+.collections__title {
+	font-size: 32px;
+	margin: 120px 0 25px 0;
+}
+
+.cards {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card__img {
+	width: 396px;
+	height: 396px;
+}
+
+.card__text {
+	margin: 0 auto;
+	width: 357px;
+}
+
+.card__title {
+	margin: 15px 0 10px 0;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+.card__description {
+	width: 355px;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+.nature {
+	margin-top: 135px;
+}
+
+.nature__description {
+	width: 655px;
+	margin: 50px auto 30px auto;
+}
+
+.nature__btn {
+	width: 380px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+.reversing__btn {
+	width: 384px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+.form {
+	width: 825px;
+	text-align: center;
+	margin: 180px auto 0 auto;
+}
+
+.form__title {
+	font-size: 32px;
+}
+
+.form__desctiption {
+	margin-top: 35px;
+	line-height: 24px;
+	letter-spacing: 0.5;
+}
+
+.form__container_input {
+	position: relative;
+}
+
+.form_input {
+	border-bottom: 3px solid black;
+	width: 590px;
+	font-size: 32px;
+	line-height: 48px;
+	margin-top: 50px;
+}
+
+.form_input::placeholder {
+	color: #000000;
+	font-size: 16px;
+	opacity: 40%;
+	padding-left: 20px;
+}
+
+.form__btn {
+	position: absolute;
+	top: 50px;
+	left: 720px;
+	background: #212A2F;
+	height: 48px;
+	width: 111px;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.form__btn:hover,
+.form__btn:focus {
+	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	transform: translateY(-0.25em);
+}
+
+.form__links {
+	margin: 25px 0 50px 0;
+}
+
+.form__link {
+	color: #74797C;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+/*-----------------------------------------------------------------------------------*/
+footer {
+	background: #212A2F;
+	height: 820px;
+	font-size: 12px;
+	font-weight: 400;
+	color: #FFFFFF;
+	padding-top: 70px;
+}
+
+.footer__links {
+	width: 830px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__links_list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list__title {
+	font-size: 14px;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+
+.list__link {
+	margin-top: 15px;
+	letter-spacing: 0.5px;
+}
+
+.footer__flow {
+	margin-top: 85px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__flow_info_title {
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 21px;
+}
+
+.footer__flow_info_description {
+	margin-top: 21px;
+	width: 300px;
+	line-height: 18px;
+	letter-spacing: 0.5px;
+}
+
+.footer__flow_language_jap {
+	margin-right: 25px;
+}
+
+.footer__final {
+	margin: 125px 0 90px 0;
+	text-align: center;
+	line-height: 18px;
+	letter-spacing: 0.5px;
+}
